@@ -1,0 +1,63 @@
+body{
+    background-color: black;
+}
+
+.grid{
+    width: 560px;
+    height: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    div{
+        width: 20px;
+        height: 20px;
+        box-sizing: border-box;
+    }
+}
+
+.pac-dot{
+    background-color: green;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.wall{
+    background-color: blue;
+
+}
+
+.power-pellet{
+    border: chartreuse 3px dotted;
+    border-radius: 10px;
+    background-color: transparent;
+
+}
+
+.blinky{
+    color: red;
+}
+
+.pinky{
+    color: pink;
+}
+
+.inky{
+    color: cyan;
+}
+
+.clyde{
+    color: orange;
+}
+
+.scared-ghost{
+    color: aquamarine;
+}
+
+.pacman{
+    border-radius: 10px;
+    background: conic-gradient(
+        yellow 0deg 270deg,   /* Färbt 3/4 des Kreises */
+        transparent 270deg 360deg /* Lässt das letzte Viertel transparent */
+    );
+    transform: rotate(135deg);
+}
