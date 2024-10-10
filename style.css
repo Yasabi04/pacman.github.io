@@ -10,8 +10,18 @@ body{
     }
 }
 
+.haveNoName{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    span{
+        margin-left: 20px;
+        color: white;
+        font-size: 20px;
+    }
+}
+
 .grid{
-    
     width: 560px;
     height: 560px;
     display: flex;

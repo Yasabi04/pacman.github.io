@@ -125,12 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
         squares[pacmanCurrentIndex].classList.add('pacman')
         pacDotEaten()
         powerPelletEaten()
-        //checkForGameOver()
-        //checkForWin()
     }
     document.addEventListener('keyup', movePacman)
-
-    //what happens when pacman eats a pac-dot
 
     function pacDotEaten(){
         if(squares[pacmanCurrentIndex].classList.contains('pac-dot')){
@@ -248,10 +244,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function checkForWin(){
-        if(score === 274){
-            ghost.forEach(ghost => clearInterval(ghost.timerId))
+        //Wenn alle pac-dots und alle power-pellets gegessen wurden hat der Spieler gewonnen
+        if(
+            score === 274
+        ){
+            ghosts.forEach(ghost => clearInterval(ghost.timerId))
             document.removeEventListener('keyup', movePacman)
-            setTimeout(function(){ alert('You have WON!')}, 500)
+            alert('You have WON!')
         }
     }
 })
