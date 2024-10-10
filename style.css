@@ -1,8 +1,17 @@
 body{
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img{
+        height: 100px;
+        width: auto;
+    }
 }
 
 .grid{
+    
     width: 560px;
     height: 560px;
     display: flex;
