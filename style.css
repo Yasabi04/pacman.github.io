@@ -57,7 +57,33 @@ body{
     border-radius: 10px;
     background: conic-gradient(
         yellow 0deg 270deg,   /* Färbt 3/4 des Kreises */
-        transparent 270deg 360deg /* Lässt das letzte Viertel transparent */
+        transparent 270deg 270deg /* Lässt das letzte Viertel transparent */
     );
     transform: rotate(135deg);
+    animation: crunch 0.5s infinite;
+    transition: 0.2s;
+}
+
+@keyframes crunch{
+    0%{
+        background: conic-gradient(
+            yellow 0deg 270deg,   /* Färbt 3/4 des Kreises */
+            transparent 270deg 270deg /* Lässt das letzte Viertel transparent */
+        );
+        transform: rotate(135deg);
+    }
+    50%{
+        background: conic-gradient(
+        yellow 0deg 360deg,   /* Färbt 3/4 des Kreises */
+        transparent 270deg 270deg /* Lässt das letzte Viertel transparent */
+    );
+    transform: rotate(180deg);
+    }
+    100%{
+        background: conic-gradient(
+        yellow 0deg 270deg,   /* Färbt 3/4 des Kreises */
+        transparent 270deg 270deg /* Lässt das letzte Viertel transparent */
+    );
+    transform: rotate(135deg);
+    }
 }

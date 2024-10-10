@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     squares[pacmanCurrentIndex -1].classList.contains('ghost-lair') === false
                 ){
                     pacmanCurrentIndex -= 1
+                    squares[pacmanCurrentIndex].classList.add('left')
                 }
                 if(squares[pacmanCurrentIndex -1] === squares[363]){
                     pacmanCurrentIndex = 391
@@ -230,6 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
     
             checkForGameOver()
+            checkForWin()
         }, ghost.speed)
     }
     
